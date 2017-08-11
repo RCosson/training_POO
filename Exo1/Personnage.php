@@ -1,7 +1,8 @@
 <?php
 
 class Personnage{
-  private $hp = 100;
+  const MAX_HP = 100;
+  private $hp = 80;
   private $det = 120;
   private $name;
 
@@ -29,7 +30,7 @@ class Personnage{
 
   public function regen($hp = null){
     if ($hp == null) {
-      $this->hp = 100;
+      $this->hp = self::MAX_HP;
     } else {
       $this->hp = $this->hp + $hp;
     //$this->hp += vie; <- pareil
